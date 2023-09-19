@@ -1,0 +1,31 @@
+.title {
+  text-align: center;
+  margin-bottom: $margin-bottom;
+
+  .h1-decoration {
+    font-weight: $fw-200;
+    color: $Grayish-Blue;
+  }
+
+  .span-clr {
+    font-weight: $fw-600;
+    color: $Very-Dark-Blue;
+  }
+
+  .heading-p-tag {
+    color: $Grayish-Blue;
+  }
+}
+
+@include breakpoint(1392px) {
+  .title {
+    font-size: $Font-size-desktop * 1.33;
+    max-width: 31rem;
+    margin-bottom:10rem;
+    margin: auto;
+
+    .heading-p-tag {
+      font-size: $Font-size-desktop;
+    }
+  }
+}

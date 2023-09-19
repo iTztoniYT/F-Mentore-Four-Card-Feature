@@ -1,0 +1,59 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 36.06rem;
+  margin: auto;
+  gap: $gap;
+
+  .card {
+    border-radius: 0.625rem;
+    padding: 1rem;
+    box-shadow: 0 0 16px hsl(180, 62%, 55%, 0.15);
+    background-color: white;
+
+    .text-content {
+      margin-bottom: 3rem;
+    }
+    .card__text_decoration {
+      color: $Grayish-Blue;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+    }
+
+    &:first-child {
+      border-top: $border-top solid $Cyan;
+    }
+
+    &:nth-child(2) {
+      border-top: $border-top solid $red;
+    }
+
+    &:nth-child(3) {
+      border-top: $border-top solid $Orange;
+    }
+
+    &:last-child {
+      border-top: $border-top solid $Blue;
+    }
+  }
+}
+
+@include breakpoint(1392px) {
+  .cards {
+    max-width: 87.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      width: 25rem;
+
+      &:nth-child(odd) {
+        transform: translateY(50%);
+      }
+    }
+  }
+}
